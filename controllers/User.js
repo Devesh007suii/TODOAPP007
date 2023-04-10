@@ -64,7 +64,7 @@ export const register = async (req,res)=>{
  
     sendToken(res,user,201,"OTP sent to your email, Please verify Your account")
    
-    
+    await user.save();
 
     } catch (error) {
         res
